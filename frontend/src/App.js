@@ -14,6 +14,7 @@ import { getUser, loadUser } from './actions/user';
 import { useDispatch, useSelector } from 'react-redux';
 import Youtube from './Components/Admin/Youtube';
 import Project from './Components/Admin/Project';
+import Loader from './Components/Loader/Loader';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <Router>
-      {loading ? <div>Loading</div> : (
+      {loading ? <Loader /> : (
         <>
           <Header />
 

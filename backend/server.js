@@ -4,10 +4,13 @@ import { connectDatabase } from "./config/database.js"
 import cloudinary from "cloudinary";
 
 
-//config
-if(process.env.NODE_ENV !== "PRODUCTION"){
-    require("dotenv").config({path:"backend/config/config.env"});
-}
+// //config
+// if(process.env.NODE_ENV !== "PRODUCTION"){
+//     require("dotenv").config({path:"backend/config/config.env"});
+// }
+
+dotenv.config({ path: "backend/config/config.env"})
+
 connectDatabase();
 
 cloudinary.v2.config({
